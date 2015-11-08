@@ -1,13 +1,18 @@
-## vuejsのフォームを自動生成するプラグイン
+## Form handling library for [vue.js](http://vuejs.org/).
 
-### 作成中
+No more bothered about chores of handling form.
+
+### WIP
+
+The following is a work in progress.
 
 - [ ] input[type="check"]
 - [ ] input[type="radio"]
 - [ ] select
 - [ ] textarea
 
-### 使い方
+
+### Quick Start
 
 ```js
 const defaultForm = new VueForm();
@@ -20,15 +25,31 @@ Vue.use(defaultForm);
 
 ![](./example/example.gif)
 
-### カスタムして使う
+Then, you can listen user's input like follow.
+
+```js
+new Vue({
+  el: '#root',
+  created() {
+    defaultForm.on((inputed)=> {
+      console.log(inputed);
+    });
+  },
+});
+
+```
+
+
+### Design your form
+
 ```js
 const customForm = new VueForm({
   name: 'your-custom-name',
   items: [
     {
       type: 'text',
-      name: '項目の名前',
-      errorMessage: '不正規な値です',
+      name: 'Name of your field',
+      errorMessage: 'It is invalid!',
       minLength: 3,
       maxLength: 5,
       required: true,
@@ -44,7 +65,7 @@ Vue.use(customForm);
 
 ![](./example/example2.gif)
 
-### 有効なバリデーション条件
+### Currently valid validation conditions
 
 - required
 - minLength

@@ -7,8 +7,8 @@ const customForm = new VueForm({
   items: [
     {
       type: 'text',
-      name: '項目の名前',
-      errorMessage: '不正規な値です',
+      name: 'Name of your field',
+      errorMessage: 'It is invalid!',
       minLength: 3,
       maxLength: 5,
       required: true,
