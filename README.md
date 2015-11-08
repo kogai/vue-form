@@ -2,6 +2,10 @@
 
 No more bothered about chores of handling form.
 
+### Compatibility
+
+vue.js >= 1.x
+
 ### WIP
 
 The following is a work in progress.
