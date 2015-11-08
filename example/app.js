@@ -3,7 +3,6 @@ import VueForm from '../lib';
 
 const childComponent = Vue.extend({
   data() {
-    console.log('childComponent compiled.');
     return { childmock: 'This is child component.' };
   },
   template: '<section>{{childmock}}</section>'
