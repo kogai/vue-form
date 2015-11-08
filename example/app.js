@@ -1,15 +1,23 @@
 import Vue from '../.sample/vue1.0';
 import VueForm from '../lib';
 
-const childComponent = Vue.extend({
-  data() {
-    return { childmock: 'This is child component.' };
-  },
-  template: '<section>{{childmock}}</section>'
+const defaultForm = new VueForm();
+const customForm = new VueForm({
+  name: 'vue-form-custom',
+  items: [
+    {
+      type: 'text',
+      name: 'custom',
+      dirty: true,
+      errorMessage: '不正規な値です',
+      required: true,
+    },
+  ],
 });
 
-Vue.use(VueForm);
+Vue.use(defaultForm);
+Vue.use(customForm);
+
 const vm = new Vue({
   el: '#root',
-  components: { childComponent },
 });
