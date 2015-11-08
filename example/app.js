@@ -3,13 +3,15 @@ import VueForm from '../lib';
 
 const defaultForm = new VueForm();
 const customForm = new VueForm({
-  name: 'vue-form-custom',
+  name: 'your-custom-name',
   items: [
     {
       type: 'text',
-      name: 'custom',
+      name: '項目の名前',
       dirty: true,
       errorMessage: '不正規な値です',
+      minLength: 3,
+      maxLength: 5,
       required: true,
     },
   ],
@@ -18,6 +20,6 @@ const customForm = new VueForm({
 Vue.use(defaultForm);
 Vue.use(customForm);
 
-const vm = new Vue({
+new Vue({
   el: '#root',
 });
