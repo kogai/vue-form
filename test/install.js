@@ -4,13 +4,12 @@ import jsdom from 'jsdom';
 import VueForm from '../lib';
 
 describe('Vue.install', ()=> {
-  const myForm = new VueForm({
+  const myForm = {
     items: [
-      {
-        name: 'username',
-      },
+      { name: 'username' },
     ],
-  });
+  };
+
   let vm;
   before((done)=> {
     jsdom.env({
@@ -34,7 +33,7 @@ describe('Vue.install', ()=> {
             test: 'This is test.',
           },
         });
-        Vue.use(myForm);
+        Vue.use(VueForm, myForm);
         Vue.nextTick(done);
       },
     });
@@ -50,8 +49,8 @@ describe('Vue.install', ()=> {
   });
 
   it('Can create custom element-directives.', ()=> {
+    assert(vm.$el.innerHTML.match('<vue-form>'));
     assert(vm.$el.innerHTML.match('<div class="vue-form-item">'));
-
     assert(vm.$el.innerHTML.match('<dl class="vue-form-item__username">'));
     assert(vm.$el.innerHTML.match('<dt>username</dt>'));
     assert(vm.$el.innerHTML.match('<input type="text" v-model="formUsername">'));
