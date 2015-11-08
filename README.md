@@ -1,5 +1,14 @@
 ## vuejsのフォームを自動生成するプラグイン
 
+### 作成中
+
+- [ ] submitの表示
+- [ ] formの値を受け渡すインターフェース
+- [ ] input[type="check"]
+- [ ] input[type="radio"]
+- [ ] select
+- [ ] textarea
+
 ### 使い方
 
 ```js
