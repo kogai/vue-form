@@ -3,8 +3,8 @@
 ### 作成中
 
 - [ ] インスタンス毎の名前空間に格納
-- [ ] submitの表示
-- [ ] formの値を受け渡すインターフェース
+- [x] submitの表示
+- [x] formの値を受け渡すインターフェース
 - [ ] input[type="check"]
 - [ ] input[type="radio"]
 - [ ] select
