@@ -4,9 +4,10 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "start": "",
+    "start": "open ./example/index.html && npm run build:example:watch",
     "build": "$(npm bin)/browserify -v -t babelify -e lib/index.js -o vue-form.js",
     "build:watch": "$(npm bin)/watchify -v -t babelify -e lib/index.js -o vue-form.js",
+    "build:example:watch": "$(npm bin)/watchify -v -t babelify -e example/app.js -o example/bundle.js",
     "test": "npm run test:lint && npm run test:unit",
     "test:lint": "$(npm bin)/eslint .",
     "test:unit": "NODE_ENV=test $(npm bin)/mocha --recursive --compilers js:espower-babel/guess",
