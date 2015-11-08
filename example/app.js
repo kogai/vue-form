@@ -8,7 +8,6 @@ const customForm = new VueForm({
     {
       type: 'text',
       name: '項目の名前',
-      dirty: true,
       errorMessage: '不正規な値です',
       minLength: 3,
       maxLength: 5,

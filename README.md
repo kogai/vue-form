@@ -2,9 +2,6 @@
 
 ### 作成中
 
-- [x] インスタンス毎の名前空間に格納
-- [x] submitの表示
-- [x] formの値を受け渡すインターフェース
 - [ ] input[type="check"]
 - [ ] input[type="radio"]
 - [ ] select
@@ -30,8 +27,7 @@ const customForm = new VueForm({
   items: [
     {
       type: 'text',
-      name: 'custom',
-      dirty: true,
+      name: '項目の名前',
       errorMessage: '不正規な値です',
       minLength: 3,
       maxLength: 5,
@@ -47,3 +43,10 @@ Vue.use(customForm);
 ```
 
 ![](./example/example2.gif)
+
+### 有効なバリデーション条件
+
+- required
+- minLength
+- maxLength
+- isEmail
