@@ -22,7 +22,7 @@
     "babel-runtime": "^6.0.14",
     "babelify": "^6.4.0",
     "browserify": "^12.0.1",
-    "eslint": "^1.8.0",
+    "eslint": "^6.5.1",
     "eslint-config-airbnb": "^0.1.0",
     "eslint-plugin-react": "^3.6.3",
     "espower-babel": "^3.3.0",
